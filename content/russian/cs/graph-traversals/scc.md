@@ -57,7 +57,7 @@ void dfs1(int v) {
 void dfs2(int v) {
     component[v] = cnt_components;
     for (int u : t[v])
-        if (cnt_components[u] == 0)
+        if (component[u] == 0)
             dfs2(u);
 }
 
